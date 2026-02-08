@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+}
+
+.titulo {
+    margin: 20px 0;
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+.carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 10;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    background: #000;
+}
+
+/* CADA SLIDE */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* SLIDE ACTIVO */
+.slide.activo {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* IMAGEN */
+.slide img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;        /* 🔥 clave */
+    object-position: center;  /* centra la imagen */
+}
+
+/* BOTONES */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.anterior { left: 15px; }
+.siguiente { right: 15px; }
+
+.btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/* VISOR PDF */
+.visor-pdf {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.visor-pdf h2 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px #000;
+}
+
+.visor-pdf iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    background: white;
+}
+
+/* CANVAS DE CORAZONES DE FONDO */
+#corazones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
