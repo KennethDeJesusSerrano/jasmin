@@ -42,7 +42,7 @@ class TextoFlotante {
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = "#ff4d6d";
         ctx.font = `${this.size}px Arial`;
-        ctx.fillText("Te amo ❤️", this.x, this.y);
+        ctx.fillText("Te amo Jasmin ❤️", this.x, this.y);
         ctx.globalAlpha = 1;
     }
 
